@@ -11,7 +11,7 @@ const grotesk = Hanken_Grotesk({
 });
 
 // TODO: replace with the real production domain once it's connected, e.g. "https://www.dobletoma.com"
-const siteUrl = "https://REPLACE-WITH-YOUR-DOMAIN.com";
+const siteUrl = "https://doble-toma-website-7ve6rmbel-dobletoma-s-projects.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
