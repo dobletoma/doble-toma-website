@@ -20,6 +20,10 @@
 # local tooling config (not part of the website project)
 .claude/
 
+# original raw video backups (kept locally, not needed to run the site —
+# the site only ever loads the optimized .mp4 versions in this folder)
+public/*.mov
+
 # debug
 npm-debug.log*
 yarn-debug.log*
