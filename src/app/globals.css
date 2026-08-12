@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-grotesk: "Hanken Grotesk", system-ui, sans-serif;
+
+  --bg:     #3D4F42;
+  --clay:   #B5623F;
+  --sand:   #F3EAD9;
+  --ink:    #241C15;
+  --card:   #FCF9F3;
+  --radius-card: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-grotesk);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+
+/* ── Selection ── */
+::selection { background: rgba(181,98,63,0.22); color: var(--ink); }
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.25,0.46,0.45,0.94),
+              transform 0.75s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Card hover lift ── */
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94),
+              box-shadow 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+/* ── Clip overflow for image cards ── */
+.clip-card { overflow: hidden; border-radius: var(--radius-card); }
+
+/* ── Non-standard bg opacity shorthands ── */
+.bg-white\/8  { background-color: rgba(255,255,255,0.08); }
+.bg-white\/12 { background-color: rgba(255,255,255,0.12); }
+
+/* ── Glassmorphism panels ── */
+/* Frosted glass for dark photographic backgrounds — light text */
+.glass-dark {
+  background: rgba(18, 20, 15, 0.34);
+  backdrop-filter: blur(38px) saturate(160%);
+  -webkit-backdrop-filter: blur(38px) saturate(160%);
+  border: 1px solid rgba(255, 251, 231, 0.18);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+/* Frosted glass for warm/light photographic backgrounds — dark text */
+.glass-light {
+  background: rgba(252, 249, 243, 0.4);
+  backdrop-filter: blur(42px) saturate(160%);
+  -webkit-backdrop-filter: blur(42px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 40px rgba(36, 28, 21, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+/* Same panel as glass-light, but a dimmer border — for glass-light panels
+   sitting over a darker background photo, where the default border reads
+   too bright by contrast. */
+.glass-light-soft {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+/* Slightly more opaque than glass-dark — used only for the fixed navbar,
+   which needs to stay legible over rapidly-changing scroll content. */
+.glass-nav {
+  background: rgba(14, 16, 11, 0.52);
+  backdrop-filter: blur(30px) saturate(150%);
+  -webkit-backdrop-filter: blur(30px) saturate(150%);
+  border: 1px solid rgba(255, 251, 231, 0.16);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+/* Subtle frosted chip — smaller elements (pills, tags) on dark photo */
+.glass-chip {
+  background: rgba(255, 251, 231, 0.16);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 251, 231, 0.2);
+}
+/* Subtle frosted chip — smaller elements on light photo */
+.glass-chip-light {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+/* ── Section background photography ── */
+.section-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.section-photo img { object-fit: cover; }
+.section-photo-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
