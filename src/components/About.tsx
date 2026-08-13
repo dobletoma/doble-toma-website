@@ -119,7 +119,7 @@ export default function About() {
                       "Editing & Post-Production",
                       "Final Delivery",
                     ].map((item, i) => (
-                      <div key={item} className="flex items-center gap-2 text-base leading-relaxed text-sand-100/90">
+                      <div key={item} className="flex items-start gap-2 text-base leading-relaxed text-sand-100/90">
                         <span className="text-xs font-bold text-clay-400 shrink-0 w-5">
                           {String(i + 1).padStart(2, "0")}
                         </span>
