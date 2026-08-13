@@ -231,10 +231,10 @@ export default function Work() {
         <Reveal delay={200}>
           <div className="mt-12 flex justify-center">
             <a
-              href="#contact"
+              href="#services"
               className="glass-chip inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-bold text-sm hover:bg-clay-500 active:scale-[0.97] transition-all duration-300"
             >
-              Want your property featured here?
+              Ways we can work together
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

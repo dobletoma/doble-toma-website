@@ -109,7 +109,7 @@ export default function About() {
                   <p className="text-xs font-semibold uppercase tracking-widest text-clay-400 mb-4">
                     From Concept to Delivery
                   </p>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 grid-rows-4 grid-flow-col gap-2">
                     {[
                       "Creative Direction",
                       "Content Planning",

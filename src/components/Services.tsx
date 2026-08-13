@@ -113,18 +113,6 @@ export default function Services() {
           </div>
         </Reveal>
 
-        <Reveal>
-          <a
-            href="#service-01"
-            className="glass-chip inline-flex flex-col items-center gap-2 px-8 py-5 rounded-full text-center mb-10 hover:bg-white/10 transition-all duration-300"
-          >
-            <span className="italic font-light text-lg text-sand-50">
-              Ways we can work together
-            </span>
-            <span className="text-white/60 text-sm leading-none">↓</span>
-          </a>
-        </Reveal>
-
         {/* Services grid — editorial glass menu */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
@@ -138,7 +126,6 @@ export default function Services() {
               >
                 <div
                   ref={(el) => { cardRefs.current[i] = el; }}
-                  id={i === 0 ? "service-01" : undefined}
                   onMouseEnter={() => activate(i)}
                   className={`h-full rounded-[2rem] transition-all duration-500 hover:-translate-y-1 ${
                     on ? "glass-dark" : "glass-light glass-light-soft"

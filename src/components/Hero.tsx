@@ -74,19 +74,13 @@ export default function Hero() {
             {/* CTAs */}
             <div className="mt-7 flex flex-wrap gap-3 ml-0">
               <a
-                href="#contact"
+                href="#work"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-dusty-500 text-white font-bold text-sm hover:bg-dusty-600 active:scale-[0.97] transition-all duration-300"
               >
-                Let&rsquo;s Talk
+                See Our Work
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
-              <a
-                href="#work"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sand-100/90 text-sm hover:text-sand-50 active:scale-[0.97] transition-all duration-300 border border-sand-100/15 hover:border-sand-100/30"
-              >
-                See Our Work
               </a>
             </div>
 
@@ -163,17 +157,10 @@ export default function Hero() {
 
               {/* Bottom label */}
               <div className="absolute bottom-5 left-5 right-5">
-                <div className="glass-chip rounded-2xl px-5 py-3.5 flex items-center justify-between">
-                  <div>
-                    <p className="text-sand-100/70 text-[10px] uppercase tracking-widest font-sans mb-0.5">Recent Work</p>
-                    <p className="text-white font-bold text-base leading-tight">Casa Ohana</p>
-                    <p className="text-white/75 text-xs mt-0.5">Puerto Escondido, Oaxaca</p>
-                  </div>
-                  <div className="w-9 h-9 rounded-full bg-clay-500/20 border border-clay-500/30 flex items-center justify-center shrink-0">
-                    <svg className="w-4 h-4 text-clay-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
+                <div className="glass-chip rounded-2xl px-5 py-3.5">
+                  <p className="text-sand-100/70 text-[10px] uppercase tracking-widest font-sans mb-0.5">Recent Work</p>
+                  <p className="text-white font-bold text-base leading-tight">Casa Ohana</p>
+                  <p className="text-white/75 text-xs mt-0.5">Puerto Escondido, Oaxaca</p>
                 </div>
               </div>
             </div>
