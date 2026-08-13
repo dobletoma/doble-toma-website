@@ -113,8 +113,21 @@ export default function Services() {
           </div>
         </Reveal>
 
+        <Reveal>
+          <a
+            href="#service-01"
+            className="glass-chip inline-flex flex-col items-center gap-2 px-8 py-5 rounded-full text-center mb-10 hover:bg-white/10 transition-all duration-300"
+          >
+            <span className="italic font-light text-lg text-sand-50">
+              Ways we can work together
+            </span>
+            <span className="text-white/60 text-sm leading-none">↓</span>
+          </a>
+        </Reveal>
+
         {/* Services grid — editorial glass menu */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
           {services.map((s, i) => {
             const on = activated[i];
             return (
@@ -125,6 +138,7 @@ export default function Services() {
               >
                 <div
                   ref={(el) => { cardRefs.current[i] = el; }}
+                  id={i === 0 ? "service-01" : undefined}
                   onMouseEnter={() => activate(i)}
                   className={`h-full rounded-[2rem] transition-all duration-500 hover:-translate-y-1 ${
                     on ? "glass-dark" : "glass-light glass-light-soft"
@@ -171,21 +185,6 @@ export default function Services() {
               </Reveal>
             );
           })}
-
-          {/* Accent cell */}
-          <Reveal delay={320} className="glass-dark rounded-[2rem]">
-            <div className="p-8 lg:p-10 flex flex-col justify-between min-h-[240px] h-full">
-              <div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-white/60 mb-5">→</div>
-                <div className="italic font-light text-3xl lg:text-4xl text-sand-50 leading-[1.1]">
-                  Ways we can work together
-                </div>
-              </div>
-              <p className="text-white/85 text-sm mt-4">
-                From one-time shoots to ongoing content and social media support.
-              </p>
-            </div>
-          </Reveal>
         </div>
 
       </div>

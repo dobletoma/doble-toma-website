@@ -74,19 +74,10 @@ export default function About() {
                   </span>
                 </h2>
                 <p className="text-sand-100/90 text-base leading-relaxed mb-4">
-                  We&rsquo;re Paulina &amp; Adriana, two 24-year-olds and the founders of Doble Toma. We met in high school, and somewhere along the way, we discovered we shared the same passion for creating videos, beautiful spaces, and all the little details that make a place feel special.
+                  Doble Toma is a creative content studio founded by Paulina Garza and Adriana Jimenez. We create social-first content for boutique hotels, villas, Airbnbs, and hospitality brands.
                 </p>
                 <p className="text-sand-100/90 text-base leading-relaxed mb-4">
-                  We&rsquo;ve always loved picking up a camera, creating something out of what&rsquo;s around us, and appreciating good design — whether it&rsquo;s a thoughtfully designed villa, a boutique hotel, a beautiful home, or a unique stay.
-                </p>
-                <p className="text-sand-100/90 text-base leading-relaxed mb-4">
-                  So we decided to bring both passions together and create Doble Toma.
-                </p>
-                <p className="text-sand-100/90 text-base leading-relaxed mb-4">
-                  Today, we&rsquo;re a creative content studio creating social-first content. From creative direction and production to filming, editing, and final delivery, we handle every step of the creative process.
-                </p>
-                <p className="text-sand-100/90 text-base leading-relaxed mb-4">
-                  Our goal is simple: to create visuals that capture not only how a place looks, but how it feels to be there — inspiring travel and making people want to experience it for themselves.
+                  From creative direction and production to filming, editing, and final delivery, we handle every step of the creative process—creating content designed to inspire travel and drive bookings.
                 </p>
                 <p className="text-sand-100/90 text-base leading-relaxed italic">
                   Based in Monterrey, Mexico — available worldwide.
