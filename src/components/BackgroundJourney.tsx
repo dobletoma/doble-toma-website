@@ -7,12 +7,12 @@ import { useEffect, useRef } from "react";
 // position exactly one or two adjacent layers are visible and their
 // opacities always sum to 1, so the raw page background is never exposed.
 const waypoints = [
-  { id: "hero",     src: "https://images.unsplash.com/photo-1757338409748-35a566416113?w=2400&q=90&auto=format&fit=crop" }, // dark green tropical leaves layered closely together
-  { id: "about",    src: "https://images.unsplash.com/photo-1761068967072-1c104217c4dd?w=2400&q=90&auto=format&fit=crop", dim: 0.32 }, // smooth sandstone — dimmed further so the light glass panel's text (incl. clay-orange accents) stays readable over its brightest highlights
-  { id: "work",     src: "https://images.unsplash.com/photo-1618502396341-5c680e7d7233?w=2400&q=90&auto=format&fit=crop" }, // rich dark navy ocean water, deep and saturated — more luxurious tone
-  { id: "services", src: "https://images.unsplash.com/photo-1583418007992-a8e33a92e7ad?w=2400&q=90&auto=format&fit=crop" }, // warm amber-brown wood slab, swirling organic grain, shot from a normal distance (not macro) so it stays crisp at full-screen size
-  { id: "process",  src: "https://images.unsplash.com/photo-1712145176570-6cb1d98a126a?w=2400&q=90&auto=format&fit=crop" }, // sand / paper texture
-  { id: "contact",  src: "https://images.unsplash.com/photo-1630678160999-187fa4e670f9?w=2400&q=90&auto=format&fit=crop", dim: 0.5 }, // dark green leaves, water droplets — dimmed further since the Footer sits directly on this image with no card behind it
+  { id: "hero",     src: "/bg-hero.jpg" }, // dark green tropical leaves layered closely together
+  { id: "about",    src: "/bg-about.jpg", dim: 0.32 }, // smooth sandstone — dimmed further so the light glass panel's text (incl. clay-orange accents) stays readable over its brightest highlights
+  { id: "work",     src: "/bg-work.jpg" }, // rich dark navy ocean water, deep and saturated — more luxurious tone
+  { id: "services", src: "/bg-services.jpg" }, // warm amber-brown wood slab, swirling organic grain, shot from a normal distance (not macro) so it stays crisp at full-screen size
+  { id: "process",  src: "/bg-process.jpg" }, // sand / paper texture
+  { id: "contact",  src: "/bg-contact.jpg", dim: 0.5 }, // dark green leaves, water droplets — dimmed further since the Footer sits directly on this image with no card behind it
 ];
 
 // Fraction of each inter-waypoint gap spent actually crossfading — confined
@@ -164,7 +164,7 @@ export default function BackgroundJourney() {
             src={w.src}
             alt=""
             fill
-            priority={i === 0}
+            loading="eager"
             quality={95}
             className="object-cover"
             sizes="100vw"
