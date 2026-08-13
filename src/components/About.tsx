@@ -109,7 +109,7 @@ export default function About() {
                   <p className="text-xs font-semibold uppercase tracking-widest text-clay-400 mb-4">
                     From Concept to Delivery
                   </p>
-                  <div className="grid grid-cols-2 grid-rows-4 grid-flow-col gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col gap-2">
                     {[
                       "Creative Direction",
                       "Content Planning",
@@ -119,7 +119,7 @@ export default function About() {
                       "Editing & Post-Production",
                       "Final Delivery",
                     ].map((item, i) => (
-                      <div key={item} className="flex items-start gap-2 text-base leading-relaxed text-sand-100/90">
+                      <div key={item} className="flex items-center gap-2 text-base leading-relaxed text-sand-100/90 whitespace-nowrap">
                         <span className="text-xs font-bold text-clay-400 shrink-0 w-5">
                           {String(i + 1).padStart(2, "0")}
                         </span>
