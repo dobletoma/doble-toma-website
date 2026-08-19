@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hanken_Grotesk } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const grotesk = Hanken_Grotesk({
@@ -10,8 +11,7 @@ const grotesk = Hanken_Grotesk({
   display: "swap",
 });
 
-// TODO: replace with the real production domain once it's connected, e.g. "https://www.dobletoma.com"
-const siteUrl = "https://doble-toma-website.vercel.app";
+const siteUrl = "https://www.dobletoma.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -60,7 +60,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={grotesk.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
